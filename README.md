@@ -6,12 +6,12 @@ Instructions: https://www.digitalocean.com/community/tutorials/how-to-install-je
 
 If fails after running `sudo apt install jenkins` with an error saying that could not find Java =>
 
-`sudo apt install openjdk-9-jre`
-`sudo apt install openjdk-8-jre`
-Open `sudo vi /etc/init.d/jenkins`
-Finally, append path to the new java executable (line 16): `PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/lib/jvm/java-8-openjdk-amd64/bin/`
+1. `sudo apt install openjdk-9-jre`
+2. `sudo apt install openjdk-8-jre`
+3. Open `sudo vi /etc/init.d/jenkins`
+4. Finally, append path to the new java executable (line 16): `PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/lib/jvm/java-8-openjdk-amd64/bin/`
 
-Source: https://stackoverflow.com/questions/39621263/jenkins-fails-when-running-service-start-jenkins
+[Source](https://stackoverflow.com/questions/39621263/jenkins-fails-when-running-service-start-jenkins)
 
 If still fails saying that port is already in use then: 
 1. `sudo vim /etc/default/jenkins`
