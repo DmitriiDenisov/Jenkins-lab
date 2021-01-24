@@ -18,3 +18,6 @@ If still fails saying that port is already in use then:
 2. Change `HTTP_PORT`
 3. `sudo systemctl start jenkins`
 
+### Reset Password: 
+
+Instructions: https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-reset-jenkins-admin-users-password/
