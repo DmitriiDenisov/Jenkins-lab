@@ -21,3 +21,7 @@ If still fails saying that port is already in use then:
 ### Reset Password: 
 
 Instructions: https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-reset-jenkins-admin-users-password/
+
+### Tutorials [Russian]
+
+https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&ab_channel=ADV-IT
