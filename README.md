@@ -26,4 +26,4 @@ Instructions: https://www.serverlab.ca/tutorials/linux/administration-linux/how-
 
 https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&ab_channel=ADV-IT
 
-Watch videos 1, 3, 5, 6
+Watch videos 1, 3, 5, 6, 7
