@@ -27,8 +27,13 @@ Instructions: https://www.serverlab.ca/tutorials/linux/administration-linux/how-
 https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&ab_channel=ADV-IT
 
 Watch videos 
+
 №1: Intro
+
 №3: Web UI and settings 
+
 №5: Important tutorial. Shows how to build most simple jobs (with build, test and deployment stages) + how to do ssh deployment
+
 №6: optional, how to connect few servers . only need in case you have large amout of jobs
+
 №8: Deployment from GitHub. 
