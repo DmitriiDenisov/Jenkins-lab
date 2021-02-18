@@ -18,6 +18,18 @@ If still fails saying that port is already in use then:
 2. Change `HTTP_PORT`
 3. `sudo systemctl start jenkins`
 
+### Install Plugins:
+
+If you can't find necessary plugin in Web UI then:
+
+1) Go to http://updates.jenkins.io/download/plugins and find page of your plugin
+
+2) After you know the name of necassary plugin (for example, it is "credentials") go by link: http://updates.jenkins.io/download/plugins/credentials/
+
+3) Download *.hpi file
+
+4) In Web UI in "Manage Plugins" go to Advanced and there upload this *.hpi file
+
 ### Reset Password: 
 
 Instructions: https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-reset-jenkins-admin-users-password/
