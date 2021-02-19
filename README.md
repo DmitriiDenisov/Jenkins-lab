@@ -48,4 +48,4 @@ Watch videos
 
 №6: optional, how to connect few servers . only need in case you have large amout of jobs
 
-№8: Deployment from GitHub. 
+№8: Deployment from GitHub (your username should match with user in ssh-key, for this use `ssh-keygen -C DmitriiDenisov -f new_key`)
