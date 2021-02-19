@@ -46,8 +46,10 @@ Watch videos
 
 №5: Important tutorial. Shows how to build most simple jobs (with build, test and deployment stages) + how to do ssh deployment
 
-№6: optional, how to connect few servers . only need in case you have large amout of jobs
+№6: (optional) how to connect few servers . only need in case you have large amout of jobs
 
 №8: Deployment from GitHub (your username should match with user in ssh-key, for this use `ssh-keygen -C DmitriiDenisov -f new_key`)
 
-№9: Jenkins Build Triggers
+№9: (optional) Jenkins Build Triggers
+
+№ 10: Jenkins trigger from GitHub, Jenkins webhook
