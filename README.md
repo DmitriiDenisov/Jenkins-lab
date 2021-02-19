@@ -34,6 +34,10 @@ If you can't find necessary plugin in Web UI then:
 
 Instructions: https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-reset-jenkins-admin-users-password/
 
+### Touble shooting
+
+Error "Docker: Got permission denied while trying to connect..." then  `sudo usermod -a -G docker jenkins`
+
 ### Tutorials [Russian]
 
 https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&ab_channel=ADV-IT
