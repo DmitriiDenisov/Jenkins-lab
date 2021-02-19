@@ -57,3 +57,5 @@ Watch videos
 №9: (optional) Jenkins Build Triggers
 
 № 10: Jenkins trigger from GitHub, Jenkins webhook
+
+№11: Build with parameters
