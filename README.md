@@ -18,6 +18,14 @@ If still fails saying that port is already in use then:
 2. Change `HTTP_PORT`
 3. `sudo systemctl start jenkins`
 
+### Useful Commands:
+```
+systemctl enable jenkins # Enable the Jenkins service to start automatically.
+service jenkins start
+service jenkins status
+service jenkins restart
+```
+
 ### Install Plugins:
 
 If you can't find necessary plugin in Web UI then:
