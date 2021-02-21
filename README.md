@@ -2,7 +2,7 @@
 
 ### How to install
 
-Instructions: https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-18-04-ru
+Follow [Instructions](https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-18-04-ru)
 
 If fails after running `sudo apt install jenkins` with an error saying that could not find Java =>
 
