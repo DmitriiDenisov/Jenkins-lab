@@ -1,0 +1,98 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>with Git</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.33.1">
+      <projectUrl>git@github.com:DmitriiDenisov/bank-bot.git/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>DOCKER_COMPOSE_PATH</name>
+          <description>Please enter full path to docker-compose.yml file</description>
+          <defaultValue>/home/dmitryhse/docker-compose.yml</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>CHOICE_DUMMY</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>one</string>
+              <string>two</string>
+              <string>three</string>
+              <string>four</string>
+              <string>five</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@4.6.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>git@github.com:DmitriiDenisov/bank-bot.git</url>
+        <credentialsId>ssh-key</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="empty-list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.33.1">
+      <spec></spec>
+    </com.cloudbees.jenkins.GitHubPushTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>echo &quot;-------------------Build Started----------------&quot;
+pwd
+echo $CHOICE_DUMMY
+docker build -t front -f Dockerfile .
+echo 
+docker-compose -f $DOCKER_COMPOSE_PATH up -d
+pwd
+echo &quot;Build by Jenkins Build # $BUILD_ID&quot; &gt;&gt; README.md
+echo &quot;-------------------Build Finished----------------&quot;</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>echo &quot;-------------------Tests Started----------------&quot;
+result=`grep &quot;hidden&quot; README.md  | wc -l`
+echo &quot;Result equals to $result&quot;
+if [ &quot;$result&quot; = &quot;1&quot; ]
+then
+	echo &quot;Tests passed&quot;
+else
+	echo &quot;Tests failed&quot;
+    exit 1
+fi
+echo &quot;-------------------Tests Finished----------------&quot;</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>echo &quot;-------------------Deployment Started----------------&quot;
+ls -la
+echo &quot;-------------------Deployment Finished----------------&quot;</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
