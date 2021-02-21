@@ -20,7 +20,7 @@ If still fails saying that port is already in use then:
 
 ### Some examples
 
-You can find examples of jobs in folder `examples in this repo`. All of them were built based on [Tutorials](https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&ab_channel=ADV-IT)
+You can find examples of jobs in folder `examples` in this repo. All of them were built based on [Tutorials](https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&ab_channel=ADV-IT)
 
 In order to import them into Jenkins (details find below in Jenkins CLI section): 
 `java -jar jenkins-cli.jar -auth USERNAME:USERPASS -s http://localhost:9090 create-job newmyjob < myjob.xml`
