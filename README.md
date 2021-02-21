@@ -18,6 +18,14 @@ If still fails saying that port is already in use then:
 2. Change `HTTP_PORT`
 3. `sudo systemctl start jenkins`
 
+### Some examples
+
+You can find examples of jobs in folder `examples in this repo`. All of them were built based on [Tutorials](https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&ab_channel=ADV-IT)
+
+In order to import them into Jenkins (details find below in Jenkins CLI section): 
+`java -jar jenkins-cli.jar -auth USERNAME:USERPASS -s http://localhost:9090 create-job newmyjob < myjob.xml`
+
+
 ### Useful Commands:
 ```
 systemctl enable jenkins # Enable the Jenkins service to start automatically.
@@ -46,9 +54,19 @@ Instructions: https://www.serverlab.ca/tutorials/linux/administration-linux/how-
 
 Error "Docker: Got permission denied while trying to connect..." then  `sudo usermod -a -G docker jenkins`
 
+### Jenkins CLI
+
+1. Download jar: `wget http://34.121.35.34:9090/jnlpJars/jenkins-cli.jar`
+
+2. Check that all is correct: `java -jar jenkins-cli.jar -auth USERNAME:USERPASS -s http://localhost:9090 who-am-i`
+
+3. Export Job: `java -jar jenkins-cli.jar -auth USERNAME:USERPASS -s http://localhost:9090 get-job myjob > myjob.xml`
+
+4. Import Job: `java -jar jenkins-cli.jar -auth USERNAME:USERPASS -s http://localhost:9090 create-job newmyjob < myjob.xml`
+
 ### Tutorials [Russian]
 
-https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&ab_channel=ADV-IT
+[Tutorials](https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&ab_channel=ADV-IT)
 
 Watch videos 
 
@@ -59,6 +77,8 @@ Watch videos
 №5: Important tutorial. Shows how to build most simple jobs (with build, test and deployment stages) + how to do ssh deployment
 
 №6: (optional) how to connect few servers . only need in case you have large amout of jobs
+
+№7: (optional) Jenkins CLI (how to import/export jobs)
 
 №8: Deployment from GitHub (your username should match with user in ssh-key, for this use `ssh-keygen -C DmitriiDenisov -f new_key`)
 
