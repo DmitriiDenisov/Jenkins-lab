@@ -62,6 +62,8 @@ Error "No module named .." or "Permission denied..." probably means that Jenkins
 
 3. Install necessary packages/libraries and then exit jenkins user
 
+4. If needed also manually install all necessary libraries 
+
 ### Jenkins CLI
 
 1. Download jar: `wget http://34.121.35.34:9090/jnlpJars/jenkins-cli.jar`
