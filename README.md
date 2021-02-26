@@ -18,6 +18,10 @@ If still fails saying that port is already in use then:
 2. Change `HTTP_PORT`
 3. `sudo systemctl start jenkins`
 
+### Debug:
+
+`sudo su - jenkins -s/bin/bash`
+
 ### Some examples
 
 You can find examples of jobs in folder `examples` in this repo. All of them were built based on [Tutorials](https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a&ab_channel=ADV-IT)
