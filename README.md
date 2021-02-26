@@ -54,6 +54,14 @@ Instructions: https://www.serverlab.ca/tutorials/linux/administration-linux/how-
 
 Error "Docker: Got permission denied while trying to connect..." then  `sudo usermod -a -G docker jenkins`
 
+Error "No module named .." or "Permission denied..." probably means that Jenkins user does not have access to python folder packages. For resolving this 
+
+1. `sudo su - jenkins -s/bin/bash`
+
+2. Check that u are under jenkins user: `whoami`
+
+3. Install necessary packages/libraries and then exit jenkins user
+
 ### Jenkins CLI
 
 1. Download jar: `wget http://34.121.35.34:9090/jnlpJars/jenkins-cli.jar`
